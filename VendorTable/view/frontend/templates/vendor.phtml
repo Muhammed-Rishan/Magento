@@ -1,0 +1,10 @@
+<?php 
+/**
+ * @var $block \Codilar\VendorTable\Block\Vendor
+ */
+foreach ($block->getAll() as $vendor): ?>
+    <div>
+        <h2><?= $vendor->getName() ?></h2>
+        <p><?= $vendor->getDescription() ?></p>
+    </div>
+<?php endforeach ?>

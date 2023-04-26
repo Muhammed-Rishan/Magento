@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vendor" translate="label" sortOrder="1">
+            <label>Vendor</label>
+        </tab>
+        <section id="demo" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+            showInStore="1">
+            <class>separator-top</class>
+            <label>Show Vendor</label>
+            <tab>codilar</tab>
+            <resource>Vendor_Configration::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                showInStore="1">
+                <label>General configuration</label>
+                <field id="enable" type="select" sortOrder="1" showInDefault="1" showInWebsite="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="text" type="text" sortOrder="2" showInDefault="1" showInWebsite="1">
+                    <label>vendor</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <!-- <validate>required-entry</validate> -->
+                    <depends>
+                        <field id="*/*/enable">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+
+    </system>
+</config>

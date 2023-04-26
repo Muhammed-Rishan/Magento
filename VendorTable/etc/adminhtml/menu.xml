@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Codilar_VendorTable::vendortable"
+             title="Codilar"
+             module="Codilar_VendorTable"
+             sortOrder="20"
+             resource="Codilar_VendorTable::vendortable"/>
+
+        <add id="Codilar_VendorTable::vendortable_manage"
+             title="Manage Vendors"
+             module="Codilar_VendorTable"
+             parent="Codilar_VendorTable::vendortable"
+             action="vendortable/vendor/index"
+             sortOrder="1"
+             resource="Codilar_VendorTable::vendortable_manage"/>
+    </menu>
+</config>

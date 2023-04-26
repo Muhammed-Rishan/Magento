@@ -1,0 +1,12 @@
+<?php
+$product = $block->getProduct();
+
+if ($product !== null) {
+    $attrLabel = $product->getResource()->getAttribute('custom_datapatch')->getStoreLabel();
+    $attrData = $product->getData('custom_datapatch');
+    ?>
+    <span class="attribute-label"><?= $attrLabel ?>:</span>
+    <span class="attribute-value"><?= $attrData ?></span>
+    <?php
+}
+?>
